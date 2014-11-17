@@ -128,7 +128,7 @@ def soe_property(doc,soe,soeProperty,soePropertyValue):
       if typeName.firstChild.data == soe:
          extension = typeName.parentNode
          for extElement in extension.childNodes:
-            if extElement.tagName == 'Props':
+            if extElement.tagName in ['Props','Info']:
                for propArray in extElement.childNodes:
                   for propSet in propArray.childNodes:
                      for prop in propSet.childNodes:
